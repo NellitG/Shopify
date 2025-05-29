@@ -4,6 +4,7 @@ from .models import (
     Customer, Cart, Wishlist, Product, Category,
     Order, OrderItem, Payment, Shipment
 )
+import uuid
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
