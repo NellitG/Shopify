@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from shopify import views
+from shopify.views import SalesAnalyticsView
 
 
 urlpatterns = [
@@ -30,5 +31,6 @@ urlpatterns = [
     path('order-items/', views.OrderItemListCreateView.as_view(), name='order-item-list-create'),
     path('payments/', views.PaymentListCreateView.as_view(), name='payment-list-create'),
     path('shipments/', views.ShipmentListCreateView.as_view(), name='shipment-list-create'),
+    path('analytics/sales/', SalesAnalyticsView.as_view(), name='sales-analytics'),
     
 ]
