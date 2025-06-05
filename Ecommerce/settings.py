@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$b^87^x#4)sy7n=sc1t$bjqv%@w$2slkr%(l=oaio=z77!ie*u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver' ]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shopify',
     'rest_framework',
+    'pytest',
 ]
 
 MIDDLEWARE = [
