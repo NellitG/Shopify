@@ -20,11 +20,6 @@ from .serializers import (
 )
 
 
-# --------------------
-# CRUD Views
-# --------------------
-
-# Customer
 class CustomerListCreateView(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
@@ -127,11 +122,7 @@ class ShipmentDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Shipment.objects.all()
     serializer_class = ShipmentSerializer
 
-
-# ----------------------------
 # Analytics View
-# ----------------------------
-
 class SalesAnalyticsView(APIView):
     def get(self, request):
         today = now().date()
