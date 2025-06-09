@@ -19,7 +19,7 @@ class Customer(TimeStampedModel):
     profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} ({self.email})"
+        return f"{self.name} ({self.email})"
 
     class Meta:
         ordering = ['-created_at']
@@ -71,7 +71,7 @@ class Wishlist(TimeStampedModel):
     products = models.ManyToManyField(Product, related_name='wishlists_by')
 
     def __str__(self):
-        return f"Wishlist for {self.customer.first_name} {self.customer.last_name} (ID: {self.id})"
+        return f"Wishlist for {self.customer.name} (ID: {self.id})"
 
 # Order model
 class Order(TimeStampedModel):
