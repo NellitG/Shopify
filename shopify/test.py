@@ -27,7 +27,7 @@ import Ecommerce
 
 class TestUrls(unittest.TestCase):
     def test_urls(self):
-        self.assertTrue(hasattr(Ecommerce.urls, 'urlpatterns'))
+        self.assertTrue(hasattr(Ecommerce.urls, 'urlpatterns')) #Tests all URLs
 
 class TestSettings(unittest.TestCase):
     def test_debug(self):
