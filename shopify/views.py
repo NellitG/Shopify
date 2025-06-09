@@ -149,7 +149,7 @@ class SalesAnalyticsView(APIView):
             "top_products": list(top_products),
             "top_customers": [
                 {
-                    "name": f"{c.first_name} {c.last_name}",
+                    "name": f"{c.name}",
                     "email": c.email,
                     "spent": c.total_spent
                 }
