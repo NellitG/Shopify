@@ -41,7 +41,7 @@ class TestSettings(unittest.TestCase):
 
     def test_database_config(self):
         self.assertIn('default', Ecommerce.settings.DATABASES)
-        self.assertEqual(Ecommerce.settings.DATABASES['default']['ENGINE'], 'django.db.backends.sqlite3')
+        self.assertEqual(Ecommerce.settings.DATABASES['default']['ENGINE'], 'django.db.backends.postgresql')
 
 class TestSerializers(unittest.TestCase):
     def test_customer_serializer(self):
