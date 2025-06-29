@@ -43,7 +43,7 @@ class Product(TimeStampedModel):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='products')
     image = models.ImageField(upload_to='product_images/', blank=True, null=True)
     is_active = models.BooleanField(default=True)
-    sku = models.CharField(max_length=30, unique=True)
+    sku = models.CharField(max_length=36, unique=True)
 
     def __str__(self):
         return f"{self.name} - ${self.price}"
